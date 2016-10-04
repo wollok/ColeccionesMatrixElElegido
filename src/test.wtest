@@ -1,0 +1,10 @@
+import matrix.*
+
+test "si sube neo, en la nave esta el elegido" {
+	nave.sube(neo)
+	assert.that(nave.estaElElegido())
+}
+
+test "en la nave inicialmete no esta el elegido" {
+	assert.notThat(nave.estaElElegido())
+}
