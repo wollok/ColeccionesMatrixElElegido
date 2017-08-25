@@ -18,7 +18,7 @@ object nave {
 	}
 	method estaEquilibrada(){
 		var pasajerosOrdenados 
-		pasajerosOrdenados = pasajeros.sortBy({pasa1,pasa2 =>pasa1.vitalidad() > pasa2.vitalidad()})
+		pasajerosOrdenados = pasajeros.sortedBy({pasa1,pasa2 =>pasa1.vitalidad() > pasa2.vitalidad()})
 		return pasajerosOrdenados.first().vitalidad() < pasajerosOrdenados.last().vitalidad()*2  
 	}
 	 
