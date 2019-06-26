@@ -1,12 +1,19 @@
 object nave {
-	var pasajeros = [morfeo]
+	var pasajeros = [morfeo,neo,trinity]
 	
 	method sube(alguien){
 		pasajeros.add(alguien)
 	}
+	method baja(alguien){
+		pasajeros.remove(alguien)
+	}
+	method cantidadPasajeros() {
+		return pasajeros.size()
+	}
 	
 	method chocar() {
 		pasajeros.forEach({pasajero=>pasajero.saltar()})
+		pasajeros.clear()
 	}
 	
 	method estaElElegido(){
@@ -16,10 +23,14 @@ object nave {
 		pasajeros.filter({pasajero => not pasajero.esElElegido()})
 			.forEach({pasajero=>pasajero.saltar()})
 	}
+	method pasajeroMasVital() {
+		return pasajeros.max{ pasajero=> pasajero.vitalidad()}
+	}
+	method pasajeroMenosVital() {
+		return pasajeros.min{ pasajero=> pasajero.vitalidad()}
+	}
 	method estaEquilibrada(){
-		var pasajerosOrdenados 
-		pasajerosOrdenados = pasajeros.sortedBy({pasa1,pasa2 =>pasa1.vitalidad() > pasa2.vitalidad()})
-		return pasajerosOrdenados.first().vitalidad() < pasajerosOrdenados.last().vitalidad()*2  
+		return self.pasajeroMasVital().vitalidad() < self.pasajeroMenosVital().vitalidad()*2  
 	}
 	 
 }
@@ -37,21 +48,22 @@ object neo {
  	}
 }
 object morfeo{
-	var cansancio = false
+	var property cansancio = false
+	var property vitalidad = 8
+	
 	method esElElegido(){
  		return false
  	}
  	method saltar() {
- 		cansancio = true
- 	}
- 	method vitalidad(){
- 		return 10
+ 		cansancio = not cansancio
+ 		vitalidad = vitalidad -1
  	}
 }
 
 object trinity {
-	var vitalidad = 0
 	method vitalidad(){
- 		return vitalidad
+ 		return 0
  	}
+ 	method saltar() {}
+ 	method esElElegido() = false 	
 }
