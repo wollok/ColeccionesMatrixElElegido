@@ -2,7 +2,7 @@
 
 ### Colecciones y bloques. Ejercicio breve 
 
-[![Build Status](https://travis-ci.org/wollok/ColeccionesMatrixElElegido.svg?branch=master)](https://travis-ci.org/wollok/ColeccionesMatrixElElegido)
+[![Build Status](https://github.com/wollok/ColeccionesMatrixElElegido/actions/workflows/ci.yml/badge.svg)](https://github.com/wollok/ColeccionesMatrixElElegido/actions/workflows/ci.yml)
 
 ![Matrix](matrix-1.png)
 
