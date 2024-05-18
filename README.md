@@ -4,7 +4,7 @@
 
 [![Build Status](https://github.com/wollok/ColeccionesMatrixElElegido/actions/workflows/ci.yml/badge.svg)](https://github.com/wollok/ColeccionesMatrixElElegido/actions/workflows/ci.yml)
 
-![Matrix](matrix-1.png)
+![Matrix](./img/matrix-1.png)
 
 Tenemos a neo, morfeo y trinity que son los pasajeros de la nave, que pueden bajarse de la nave y eventualmente volver a subir. 
 * Neo es el elegido, empieza con 100 de energia, pero cuando salta pierde la mitad de su energia. Su vitalidad es la décima parte de su energía
